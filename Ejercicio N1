@@ -1,0 +1,19 @@
+while True:
+    nums = input("Ingrese los números separados por coma: ")
+    op = input("Ingrese la operación a realizar (+, -, *): ")
+    nums = [int(num) for num in nums.split(",")]
+    if op == "+":
+        resultado = sum(nums)
+    elif op == "-":
+        resultado = nums[0] - sum(nums[1:])
+    elif op == "*":
+        resultado = 1
+        for num in nums:
+            resultado *= num
+    else:
+        print("Operación no válida")
+        continue
+    print("El resultado es:", resultado)
+    respuesta = input("¿Desea realizar otra operación? (si/no): ")
+    if respuesta.lower() == "no":
+        break
