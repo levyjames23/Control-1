@@ -1,0 +1,30 @@
+def sum(a, b):
+    c=a+b
+    return (c)
+     
+def resta(a, b):
+    return(a-b)
+opc = 0
+
+while(opc!=-1):
+    print('Menu:\n')
+    print('Ingrese Opción: \n')
+    print('1- Suma \n')
+    print('2-Resta \n')
+    print('3- Salir \n')
+   
+    opc= int(input('Ingresa opcion'))
+   
+    if(opc==1):
+        a = int(input('Ingrese primer número'))
+        b = int(input('Ingresa segundo número'))
+        print ('La respuesta es', sum(a, b))
+    elif(opc==2):
+        a= int(input('Ingresa Primer Número'))
+        b= int(input('Ingresa Segundo Número'))
+        print ('La respuesta es' ,resta(a, b))
+    elif(opc==3):
+        opc= -1
+        print('Se procede a cerrar el menu')
+    else:
+        print('Opcion incorreta')
