@@ -1,0 +1,29 @@
+def es_primo(numero):
+    """
+    Función que determina si un número es primo o no.
+    """
+    if numero < 2:
+        return False
+    for i in range(2, int(numero ** 0.5) + 1):
+        if numero % i == 0:
+            return False
+    return True
+
+def mostrar_primos(n):
+    """
+    Función que muestra los primeros n números primos.
+    """
+    contador = 0
+    numero = 2
+    while contador < n:
+        if es_primo(numero):
+            print(numero)
+            contador += 1
+        numero += 1
+
+while True:
+    n = int(input("Ingrese la cantidad de números primos que desea mostrar: "))
+    mostrar_primos(n)
+    opcion = input("¿Desea realizar otra operación? (s/n): ")
+    if opcion.lower() != "s":
+        break
